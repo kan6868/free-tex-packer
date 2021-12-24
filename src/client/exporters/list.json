@@ -4,6 +4,7 @@
     "description": "Json hash",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "JsonHash.mst",
     "fileExt": "json"
   },
@@ -12,6 +13,7 @@
     "description": "Json array",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "JsonArray.mst",
     "fileExt": "json"
   },
@@ -20,6 +22,7 @@
     "description": "Plain XML format",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "XML.mst",
     "fileExt": "xml"
   },
@@ -28,6 +31,7 @@
     "description": "css format",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "Css.mst",
     "fileExt": "css"
   },
@@ -36,6 +40,7 @@
     "description": "old css format",
     "allowTrim": false,
     "allowRotation": false,
+    "allowSort": true,
     "template": "OldCss.mst",
     "fileExt": "css"
   },
@@ -44,6 +49,7 @@
     "description": "pixi.js format",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "JsonHash.mst",
     "fileExt": "json"
   },
@@ -52,6 +58,7 @@
     "description": "Godot Atlas format",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "GodotAtlas.mst",
     "fileExt": "tpsheet"
   },
@@ -60,6 +67,7 @@
     "description": "Godot Tileset format",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "GodotTileset.mst",
     "fileExt": "tpset"
   },
@@ -68,6 +76,7 @@
     "description": "Phaser (json hash)",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "JsonHash.mst",
     "fileExt": "json"
   },
@@ -76,6 +85,7 @@
     "description": "Phaser (json array)",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "JsonArray.mst",
     "fileExt": "json"
   },
@@ -84,6 +94,7 @@
     "description": "Phaser 3",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "Phaser3.mst",
     "fileExt": "json"
   },
@@ -92,6 +103,7 @@
     "description": "Spine atlas",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "Spine.mst",
     "fileExt": "atlas"
   },
@@ -100,6 +112,7 @@
     "description": "cocos2d format",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "Cocos2d.mst",
     "fileExt": "plist"
   },
@@ -108,6 +121,7 @@
     "description": "UnrealEngine - Paper2d",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "Unreal.mst",
     "fileExt": "paper2dsprites"
   },
@@ -116,6 +130,7 @@
     "description": "Starling format",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "Starling.mst",
     "fileExt": "xml"
   },
@@ -124,6 +139,7 @@
     "description": "UIKit sprite sheet",
     "allowTrim": true,
     "allowRotation": false,
+    "allowSort": true,
     "template": "UIKit.mst",
     "fileExt": "plist",
     "predefined": true
@@ -133,6 +149,7 @@
     "description": "Unity3D sprite sheet",
     "allowTrim": true,
     "allowRotation": false,
+    "allowSort": true,
     "template": "Unity3D.mst",
     "fileExt": "tpsheet",
     "predefined": true
@@ -142,6 +159,7 @@
     "description": "Egret2D sprite sheet",
     "allowTrim": false,
     "allowRotation": false,
+    "allowSort": true,
     "template": "Egret2D.mst",
     "fileExt": "json",
     "predefined": true
@@ -151,6 +169,7 @@
     "description": "Custom format",
     "allowTrim": true,
     "allowRotation": true,
+    "allowSort": true,
     "template": "",
     "fileExt": ""
   }

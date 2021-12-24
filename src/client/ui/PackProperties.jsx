@@ -55,6 +55,7 @@ class PackProperties extends React.Component {
         let data = Storage.load(STORAGE_CUSTOM_EXPORTER_KEY);
         if(data) {
             let exporter = getExporterByType("custom");
+            exporter.allowSort = data.allowSort;
             exporter.allowTrim = data.allowTrim;
             exporter.allowRotation = data.allowRotation;
             exporter.fileExt = data.fileExt;
@@ -87,6 +88,7 @@ class PackProperties extends React.Component {
         data.powerOfTwo = data.powerOfTwo === undefined ? false : data.powerOfTwo;
         data.padding = data.padding === undefined ? 0 : data.padding;
         data.extrude = data.extrude === undefined ? 0 : data.extrude;
+        data.allowSort = data.allowSort === undefined ? true : data.allowSort;
         data.allowRotation = data.allowRotation === undefined ? true : data.allowRotation;
         data.allowTrim = data.allowTrim === undefined ? true : data.allowTrim;
         data.trimMode = data.trimMode === undefined ? "trim" : data.trimMode;
@@ -141,6 +143,7 @@ class PackProperties extends React.Component {
         data.powerOfTwo = ReactDOM.findDOMNode(this.refs.powerOfTwo).checked;
         data.padding = Number(ReactDOM.findDOMNode(this.refs.padding).value) || 0;
         data.extrude = Number(ReactDOM.findDOMNode(this.refs.extrude).value) || 0;
+        data.allowSort = ReactDOM.findDOMNode(this.refs.allowSort).checked;
         data.allowRotation = ReactDOM.findDOMNode(this.refs.allowRotation).checked;
         data.allowTrim = ReactDOM.findDOMNode(this.refs.allowTrim).checked;
         data.trimMode = ReactDOM.findDOMNode(this.refs.trimMode).value;
@@ -171,6 +174,7 @@ class PackProperties extends React.Component {
         ReactDOM.findDOMNode(this.refs.powerOfTwo).checked = this.packOptions.powerOfTwo;
         ReactDOM.findDOMNode(this.refs.padding).value = Number(this.packOptions.padding) || 0;
         ReactDOM.findDOMNode(this.refs.extrude).value = Number(this.packOptions.extrude) || 0;
+        ReactDOM.findDOMNode(this.refs.allowSort).checked = this.packOptions.allowSort;
         ReactDOM.findDOMNode(this.refs.allowRotation).checked = this.packOptions.allowRotation;
         ReactDOM.findDOMNode(this.refs.allowTrim).checked = this.packOptions.allowTrim;
         ReactDOM.findDOMNode(this.refs.trimMode).value = this.packOptions.trimMode;
@@ -205,12 +209,15 @@ class PackProperties extends React.Component {
 
     onExporterChanged() {
         let exporter = getExporterByType(ReactDOM.findDOMNode(this.refs.exporter).value);
+        let allowSortInput = ReactDOM.findDOMNode(this.refs.allowSort);
         let allowTrimInput = ReactDOM.findDOMNode(this.refs.allowTrim);
         let allowRotationInput = ReactDOM.findDOMNode(this.refs.allowRotation);
         
         let doRefresh = (allowTrimInput.checked !== exporter.allowTrim) || 
-                        (allowRotationInput.checked !== exporter.allowRotation);
+                        (allowRotationInput.checked !== exporter.allowRotation) ||
+                        (allowSortInput.checked !== exporter.allowSort);
         
+        allowSortInput.checked = exporter.allowSort;
         allowTrimInput.checked = exporter.allowTrim;
         allowRotationInput.checked = exporter.allowRotation;
         
@@ -258,10 +265,13 @@ class PackProperties extends React.Component {
     render() {
 
         let exporter = getExporterByType(this.packOptions.exporter);
+        console.info(exporter)
         let allowRotation = this.packOptions.allowRotation && exporter.allowRotation;
         let exporterRotationDisabled = exporter.allowRotation ? "" : "disabled";
         let allowTrim = this.packOptions.allowTrim && exporter.allowTrim;
         let exporterTrimDisabled = exporter.allowTrim ? "" : "disabled";
+        let allowSort = this.packOptions.allowSort && exporter.allowSort;
+        let exporterSortDisabled = exporter.allowSort ? "" : "disabled";
         
         return (
             <div className="props-list back-white">
@@ -383,6 +393,11 @@ class PackProperties extends React.Component {
                             <tr title={I18.f("EXTRUDE_TITLE")}>
                                 <td>{I18.f("EXTRUDE")}</td>
                                 <td><input ref="extrude" type="number" className="border-color-gray" defaultValue={this.packOptions.extrude} min="0" onInput={this.onPropChanged} onKeyDown={this.forceUpdate}/></td>
+                                <td></td>
+                            </tr>
+                            <tr title={I18.f("ALLOW_SORT_TITLE")}>
+                                <td>{I18.f("ALLOW_SORT")}</td>
+                                <td><input ref="allowSort" type="checkbox" className="border-color-gray" onChange={this.onPropChanged} defaultChecked={allowSort ? "checked" : ""}  disabled={exporterSortDisabled} /></td>
                                 <td></td>
                             </tr>
                             <tr title={I18.f("ALLOW_ROTATION_TITLE")}>

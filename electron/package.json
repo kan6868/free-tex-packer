@@ -49,20 +49,20 @@
         "publish": [
             {
                 "provider": "github",
-                "owner": "odrick",
+                "owner": "zfkun",
                 "repo": "free-tex-packer"
             }
         ]
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/odrick/free-tex-packer.git"
+        "url": "git+https://github.com/zfkun/free-tex-packer.git"
     },
     "keywords": [],
     "license": "ISC",
     "devDependencies": {
-        "electron": "^4.0.4",
-        "electron-builder": "^20.38.5"
+        "electron": "^4.2.5",
+        "electron-builder": "^21.2.0"
     },
     "dependencies": {
         "electron-log": "^2.2.17",

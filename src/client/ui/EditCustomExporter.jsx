@@ -24,6 +24,7 @@ class EditCustomExporter extends React.Component {
         let exporter = getExporterByType("custom");
         
         let content = ReactDOM.findDOMNode(this.refs.content).value;
+        let allowSort = ReactDOM.findDOMNode(this.refs.allowSort).checked;
         let allowTrim = ReactDOM.findDOMNode(this.refs.allowTrim).checked;
         let allowRotation = ReactDOM.findDOMNode(this.refs.allowRotation).checked;
         let fileExt = ReactDOM.findDOMNode(this.refs.fileExt).value;
@@ -32,6 +33,7 @@ class EditCustomExporter extends React.Component {
             mustache.parse(content);
 
             exporter.content = content;
+            exporter.allowSort = allowSort;
             exporter.allowTrim = allowTrim;
             exporter.allowRotation = allowRotation;
             exporter.fileExt = fileExt;
@@ -61,6 +63,9 @@ class EditCustomExporter extends React.Component {
                     </div>
                     
                     <div>
+                        <b>{I18.f("ALLOW_SORT")}</b>
+                        <input ref="allowSort" className="border-color-gray" type="checkbox" defaultChecked={exporter.allowSort ? "checked" : ""}/>
+
                         <b>{I18.f("ALLOW_TRIM")}</b>
                         <input ref="allowTrim" className="border-color-gray" type="checkbox" defaultChecked={exporter.allowTrim ? "checked" : ""}/>
 

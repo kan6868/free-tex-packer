@@ -65,6 +65,10 @@ class APP {
         this.packResult = [];
 
         for (let data of res) {
+            if (this.packOptions.allowSort) {
+                data = data.sort((a, b) => a.name.localeCompare(b.name));
+            }
+
             let renderer = new TextureRenderer(data, this.packOptions);
 
             this.packResult.push({
