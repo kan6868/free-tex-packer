@@ -8,7 +8,8 @@
     "scripts": {
         "start": "electron . --env development",
         "start-prod": "electron .",
-        "build": "electron-builder --ia32 --x64",
+        "build": "electron-builder --x64 --mac",
+        "build-win": "electron-builder --x64 --win",
         "build-publish": "electron-builder --ia32 --x64 --publish always"
     },
     "build": {
@@ -52,7 +53,10 @@
                 "owner": "zfkun",
                 "repo": "free-tex-packer"
             }
-        ]
+        ],
+        "electronDownload": {
+            "mirror": "https://npm.taobao.org/mirrors/electron/"
+        }
     },
     "repository": {
         "type": "git",
@@ -62,7 +66,7 @@
     "license": "ISC",
     "devDependencies": {
         "electron": "^4.2.5",
-        "electron-builder": "^21.2.0"
+        "electron-builder": "^22.14.5"
     },
     "dependencies": {
         "electron-log": "^2.2.17",
