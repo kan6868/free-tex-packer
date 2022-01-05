@@ -16,15 +16,15 @@ Homepage: [https://free-tex-packer.com](https://free-tex-packer.com)
 
 Web version: [https://free-tex-packer.com/app](https://free-tex-packer.com/app)
 
-Desktop versions for win, mac, linux: [https://github.com/odrick/free-tex-packer/releases](https://github.com/odrick/free-tex-packer/releases)
+Desktop versions for win, mac, linux: [https://github.com/zfkun/free-tex-packer/releases](https://github.com/zfkun/free-tex-packer/releases)
 
-Gulp module: [https://github.com/odrick/gulp-free-tex-packer](https://github.com/odrick/gulp-free-tex-packer)
+Gulp module: [https://github.com/zfkun/gulp-free-tex-packer](https://github.com/zfkun/gulp-free-tex-packer)
 
-Grunt plugin: [https://github.com/odrick/grunt-free-tex-packer](https://github.com/odrick/grunt-free-tex-packer)
+Grunt plugin: [https://github.com/zfkun/grunt-free-tex-packer](https://github.com/zfkun/grunt-free-tex-packer)
 
-Webpack plugin: [https://github.com/odrick/webpack-free-tex-packer](https://github.com/odrick/webpack-free-tex-packer)
+Webpack plugin: [https://github.com/zfkun/webpack-free-tex-packer](https://github.com/zfkun/webpack-free-tex-packer)
 
-CLI: [https://github.com/odrick/free-tex-packer-cli](https://github.com/odrick/free-tex-packer-cli)
+CLI: [https://github.com/zfkun/free-tex-packer-cli](https://github.com/zfkun/free-tex-packer-cli)
 
 # Custom templates
 Free texture packer uses [mustache](http://mustache.github.io/) template engine.
