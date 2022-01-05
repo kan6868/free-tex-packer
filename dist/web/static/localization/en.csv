@@ -64,6 +64,8 @@ ALLOW_ROTATION;Allow rotation:
 ALLOW_ROTATION_TITLE;Allow sprites rotation
 ALLOW_TRIM;Allow trim:
 ALLOW_TRIM_TITLE;Allow sprites trim
+ALLOW_SORT;Allow sorting:
+ALLOW_SORT_TITLE;Allow automatic sorting of exported results
 ALPHA_THRESHOLD;Alpha threshold:
 ALPHA_THRESHOLD_TITLE;Alpha threshold value
 TRIM_MODE;Trim mode:

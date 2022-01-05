@@ -64,6 +64,8 @@ ALLOW_ROTATION;Permitir rotación:
 ALLOW_ROTATION_TITLE;Permite que el sprite pueda rotar
 ALLOW_TRIM;Permitir Recorte:
 ALLOW_TRIM_TITLE;Permite que los sprites se puedan recortar
+ALLOW_SORT;Permitir ordenar:
+ALLOW_SORT_TITLE;Permitir la clasificación automática de los resultados exportados
 TRIM_MODE;Modo de recorte:
 TRIM_MODE_TITLE;Modos con los que podemos recortar
 ALPHA_THRESHOLD;Umbral alfa:

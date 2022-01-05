@@ -63,6 +63,8 @@ ALLOW_ROTATION;Rotation erlauben:
 ALLOW_ROTATION_TITLE;Sprites können rotiert werden
 ALLOW_TRIM;Zuschneiden erlauben:
 ALLOW_TRIM_TITLE;Erlaubt das Zuschneiden der Sprites
+ALLOW_SORT;Sortierung zulassen:
+ALLOW_SORT_TITLE;Automatische Sortierung der exportierten Ergebnisse zulassen
 ALPHA_THRESHOLD;Alpha Grenzwert:
 ALPHA_THRESHOLD_TITLE;Alpha Grenzwert
 TRIM_MODE;Trim Modus:

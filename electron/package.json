@@ -1,8 +1,8 @@
 {
     "name": "free-tex-packer",
-    "version": "0.6.8",
+    "version": "0.6.9",
     "description": "Free texture packer",
-    "homepage": "https://github.com/odrick/free-tex-packer",
+    "homepage": "https://github.com/zfkun/free-tex-packer",
     "author": "Alexander Norinchak <norinchak@gmail.com>",
     "main": "main.js",
     "scripts": {

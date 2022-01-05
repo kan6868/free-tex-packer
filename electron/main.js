@@ -276,7 +276,7 @@ function buildMenu() {
 }
 
 function installCLI() {
-    shell.openExternal('https://github.com/odrick/free-tex-packer-cli');
+    shell.openExternal('https://github.com/zfkun/free-tex-packer-cli');
 }
 
 function quit() {
