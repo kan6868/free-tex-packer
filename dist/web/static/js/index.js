@@ -267,7 +267,7 @@ module.exports = !__webpack_require__(5)(function () {
 /* 10 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"name\":\"free-tex-packer\",\"displayName\":\"Free texture packer\",\"version\":\"0.6.9\",\"description\":\"Free online texture packer\",\"url\":\"https://packer.51h5.com\",\"download\":\"https://github.com/zfkun/free-tex-packer/releases\",\"webApp\":\"https://packer.51h5.com\",\"main\":\"src/index.js\",\"tinifyUrl\":\"https://packer.51h5.com/server/tinify.php\",\"localizations\":[\"en\",\"es\",\"ru\",\"zh-cn\",\"de\"],\"contributors\":[{\"name\":\"Alexander Norinchak\",\"homepage\":\"https://github.com/odrick\"},{\"name\":\"Rubén\",\"homepage\":\"https://github.com/rtalon83\"},{\"name\":\"Querijn Heijmans\",\"homepage\":\"https://github.com/Querijn\"},{\"name\":\"Timo Kämäräinen\",\"homepage\":\"https://github.com/qtiki\"},{\"name\":\"Andrzej Kilijański\",\"homepage\":\"https://github.com/and3md\"},{\"name\":\"TheDarkMen3000\",\"homepage\":\"https://github.com/TheDarkMen3000\"},{\"name\":\"wen-\",\"homepage\":\"https://github.com/wen-\"},{\"name\":\"Davide Matta aka DadeKuma\",\"homepage\":\"https://github.com/DadeKuma\"}],\"scripts\":{\"start\":\"webpack-dev-server --host 127.0.0.1 --port 4000\",\"start-electron\":\"webpack-dev-server --host 127.0.0.1 --port 4000 --platform electron\",\"build-web\":\"webpack --build --platform web\",\"build-electron\":\"webpack --build --platform electron\"},\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/zfkun/free-tex-packer.git\"},\"keywords\":[\"texture\",\"packer\",\"texturepacker\",\"texture-packer\",\"sprites\",\"spritesheet\",\"export\",\"sprite\",\"2d\"],\"author\":\"Alexander Norinchak\",\"authorSite\":\"https://github.com/odrick/\",\"authorEmail\":\"norinchak@gmail.com\",\"license\":\"ISC\",\"bugs\":{\"url\":\"https://github.com/zfkun/free-tex-packer/issues\"},\"homepage\":\"https://github.com/zfkun/free-tex-packer\",\"devDependencies\":{\"@babel/core\":\"^7.6.4\",\"@babel/preset-env\":\"^7.6.3\",\"@babel/preset-react\":\"^7.7.4\",\"@jvitela/mustache-wax\":\"^1.0.1\",\"babel-loader\":\"^8.0.5\",\"babel-plugin-transform-runtime\":\"^6.23.0\",\"babel-polyfill\":\"^6.23.0\",\"babel-preset-es2015\":\"^6.24.0\",\"babel-preset-stage-0\":\"^6.22.0\",\"babel-runtime\":\"^6.23.0\",\"chokidar\":\"^2.0.4\",\"copy-webpack-plugin\":\"^4.6.0\",\"electron\":\"^4.0.4\",\"eventemitter3\":\"^3.0.1\",\"file-saver\":\"^2.0.0\",\"glob\":\"^7.1.1\",\"json-loader\":\"^0.5.4\",\"jszip\":\"^3.1.3\",\"maxrects-packer\":\"^2.7.2\",\"mustache\":\"^3.0.1\",\"optimist\":\"^0.6.1\",\"plist\":\"^3.0.1\",\"react\":\"^16.8.1\",\"react-dom\":\"^16.8.1\",\"webpack\":\"^4.29.3\",\"webpack-cli\":\"^3.2.3\",\"webpack-dev-server\":\"^3.1.14\",\"xml2js\":\"^0.4.19\"}}");
+module.exports = JSON.parse("{\"name\":\"free-tex-packer\",\"displayName\":\"Free texture packer\",\"version\":\"0.6.10\",\"description\":\"Free online texture packer\",\"url\":\"https://packer.51h5.com\",\"download\":\"https://github.com/zfkun/free-tex-packer/releases\",\"webApp\":\"https://packer.51h5.com\",\"main\":\"src/index.js\",\"tinifyUrl\":\"https://packer.51h5.com/server/tinify.php\",\"localizations\":[\"en\",\"es\",\"ru\",\"zh-cn\",\"de\"],\"contributors\":[{\"name\":\"Alexander Norinchak\",\"homepage\":\"https://github.com/odrick\"},{\"name\":\"Rubén\",\"homepage\":\"https://github.com/rtalon83\"},{\"name\":\"Querijn Heijmans\",\"homepage\":\"https://github.com/Querijn\"},{\"name\":\"Timo Kämäräinen\",\"homepage\":\"https://github.com/qtiki\"},{\"name\":\"Andrzej Kilijański\",\"homepage\":\"https://github.com/and3md\"},{\"name\":\"TheDarkMen3000\",\"homepage\":\"https://github.com/TheDarkMen3000\"},{\"name\":\"wen-\",\"homepage\":\"https://github.com/wen-\"},{\"name\":\"Davide Matta aka DadeKuma\",\"homepage\":\"https://github.com/DadeKuma\"}],\"scripts\":{\"start\":\"webpack-dev-server --host 127.0.0.1 --port 4000\",\"start-electron\":\"webpack-dev-server --host 127.0.0.1 --port 4000 --platform electron\",\"build-web\":\"webpack --build --platform web\",\"build-electron\":\"webpack --build --platform electron\"},\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/zfkun/free-tex-packer.git\"},\"keywords\":[\"texture\",\"packer\",\"texturepacker\",\"texture-packer\",\"sprites\",\"spritesheet\",\"export\",\"sprite\",\"2d\"],\"author\":\"Alexander Norinchak\",\"authorSite\":\"https://github.com/odrick/\",\"authorEmail\":\"norinchak@gmail.com\",\"license\":\"ISC\",\"bugs\":{\"url\":\"https://github.com/zfkun/free-tex-packer/issues\"},\"homepage\":\"https://github.com/zfkun/free-tex-packer\",\"devDependencies\":{\"@babel/core\":\"^7.6.4\",\"@babel/preset-env\":\"^7.6.3\",\"@babel/preset-react\":\"^7.7.4\",\"@jvitela/mustache-wax\":\"^1.0.1\",\"babel-loader\":\"^8.0.5\",\"babel-plugin-transform-runtime\":\"^6.23.0\",\"babel-polyfill\":\"^6.23.0\",\"babel-preset-es2015\":\"^6.24.0\",\"babel-preset-stage-0\":\"^6.22.0\",\"babel-runtime\":\"^6.23.0\",\"chokidar\":\"^2.0.4\",\"copy-webpack-plugin\":\"^4.6.0\",\"electron\":\"^4.0.4\",\"eventemitter3\":\"^3.0.1\",\"file-saver\":\"^2.0.0\",\"glob\":\"^7.1.1\",\"json-loader\":\"^0.5.4\",\"jszip\":\"^3.1.3\",\"maxrects-packer\":\"^2.7.2\",\"mustache\":\"^3.0.1\",\"optimist\":\"^0.6.1\",\"plist\":\"^3.0.1\",\"react\":\"^16.8.1\",\"react-dom\":\"^16.8.1\",\"webpack\":\"^4.29.3\",\"webpack-cli\":\"^3.2.3\",\"webpack-dev-server\":\"^3.1.14\",\"xml2js\":\"^0.4.19\"}}");
 
 /***/ }),
 /* 11 */
@@ -39589,6 +39589,275 @@ var Spine_Spine = /*#__PURE__*/function (_Splitter) {
 }(splitters_Splitter);
 
 /* harmony default export */ var splitters_Spine = (Spine_Spine);
+// CONCATENATED MODULE: ./src/client/splitters/Phaser3.js
+function Phaser3_typeof(obj) {
+  "@babel/helpers - typeof";
+
+  return Phaser3_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+    return typeof obj;
+  } : function (obj) {
+    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+  }, Phaser3_typeof(obj);
+}
+
+function Phaser3_createForOfIteratorHelper(o, allowArrayLike) {
+  var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"];
+
+  if (!it) {
+    if (Array.isArray(o) || (it = Phaser3_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") {
+      if (it) o = it;
+      var i = 0;
+
+      var F = function F() {};
+
+      return {
+        s: F,
+        n: function n() {
+          if (i >= o.length) return {
+            done: true
+          };
+          return {
+            done: false,
+            value: o[i++]
+          };
+        },
+        e: function e(_e) {
+          throw _e;
+        },
+        f: F
+      };
+    }
+
+    throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+
+  var normalCompletion = true,
+      didErr = false,
+      err;
+  return {
+    s: function s() {
+      it = it.call(o);
+    },
+    n: function n() {
+      var step = it.next();
+      normalCompletion = step.done;
+      return step;
+    },
+    e: function e(_e2) {
+      didErr = true;
+      err = _e2;
+    },
+    f: function f() {
+      try {
+        if (!normalCompletion && it["return"] != null) it["return"]();
+      } finally {
+        if (didErr) throw err;
+      }
+    }
+  };
+}
+
+function Phaser3_unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return Phaser3_arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Phaser3_arrayLikeToArray(o, minLen);
+}
+
+function Phaser3_arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+function Phaser3_classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function Phaser3_defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function Phaser3_createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) Phaser3_defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) Phaser3_defineProperties(Constructor, staticProps);
+  Object.defineProperty(Constructor, "prototype", {
+    writable: false
+  });
+  return Constructor;
+}
+
+function Phaser3_inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  Object.defineProperty(subClass, "prototype", {
+    value: Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        writable: true,
+        configurable: true
+      }
+    }),
+    writable: false
+  });
+  if (superClass) Phaser3_setPrototypeOf(subClass, superClass);
+}
+
+function Phaser3_setPrototypeOf(o, p) {
+  Phaser3_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return Phaser3_setPrototypeOf(o, p);
+}
+
+function Phaser3_createSuper(Derived) {
+  var hasNativeReflectConstruct = Phaser3_isNativeReflectConstruct();
+
+  return function _createSuperInternal() {
+    var Super = Phaser3_getPrototypeOf(Derived),
+        result;
+
+    if (hasNativeReflectConstruct) {
+      var NewTarget = Phaser3_getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return Phaser3_possibleConstructorReturn(this, result);
+  };
+}
+
+function Phaser3_possibleConstructorReturn(self, call) {
+  if (call && (Phaser3_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  } else if (call !== void 0) {
+    throw new TypeError("Derived constructors may only return object or undefined");
+  }
+
+  return Phaser3_assertThisInitialized(self);
+}
+
+function Phaser3_assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+function Phaser3_isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function Phaser3_getPrototypeOf(o) {
+  Phaser3_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return Phaser3_getPrototypeOf(o);
+}
+
+
+
+var Phaser3_Phaser3 = /*#__PURE__*/function (_Splitter) {
+  Phaser3_inherits(Phaser3, _Splitter);
+
+  var _super = Phaser3_createSuper(Phaser3);
+
+  function Phaser3() {
+    Phaser3_classCallCheck(this, Phaser3);
+
+    return _super.apply(this, arguments);
+  }
+
+  Phaser3_createClass(Phaser3, null, [{
+    key: "check",
+    value: function check(data, cb) {
+      try {
+        var json = JSON.parse(data);
+        cb(json && json.textures && Array.isArray(json.textures));
+      } catch (e) {
+        cb(false);
+      }
+    }
+  }, {
+    key: "split",
+    value: function split(data, options, cb) {
+      var res = [];
+
+      try {
+        var json = JSON.parse(data);
+
+        var _iterator = Phaser3_createForOfIteratorHelper(json.textures),
+            _step;
+
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var texture = _step.value;
+
+            var _iterator2 = Phaser3_createForOfIteratorHelper(texture.frames),
+                _step2;
+
+            try {
+              for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+                var item = _step2.value;
+                item.name = splitters_Splitter.fixFileName(item.filename);
+                res.push(item);
+              }
+            } catch (err) {
+              _iterator2.e(err);
+            } finally {
+              _iterator2.f();
+            }
+          }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
+      } catch (e) {}
+
+      cb(res);
+    }
+  }, {
+    key: "type",
+    get: function get() {
+      return "Phaser 3";
+    }
+  }]);
+
+  return Phaser3;
+}(splitters_Splitter);
+
+/* harmony default export */ var splitters_Phaser3 = (Phaser3_Phaser3);
 // CONCATENATED MODULE: ./src/client/splitters/index.js
 function splitters_createForOfIteratorHelper(o, allowArrayLike) {
   var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"];
@@ -39672,7 +39941,8 @@ function splitters_arrayLikeToArray(arr, len) {
 
 
 
-var splitters_list = [splitters_Grid, splitters_JsonHash, splitters_JsonArray, splitters_XML, splitters_UIKit, splitters_Spine];
+
+var splitters_list = [splitters_Grid, splitters_JsonHash, splitters_JsonArray, splitters_XML, splitters_UIKit, splitters_Spine, splitters_Phaser3];
 
 function getSplitterByType(type) {
   var _iterator = splitters_createForOfIteratorHelper(splitters_list),
