@@ -44,7 +44,7 @@ jobs:
         if: matrix.os == 'macos-13'
         run: |
           cd electron
-          npx electron-builder --x64 --mac
+          npx electron-builder --x64 --mac --python /usr/bin/python3
 
       - name: Build windows exe
         if: matrix.os == 'windows-2019'
