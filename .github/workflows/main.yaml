@@ -44,7 +44,7 @@ jobs:
         if: matrix.os == 'macos-13'
         run: |
           cd electron
-          npx electron-builder --x64 --mac
+          npm run build
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -52,17 +52,26 @@ jobs:
         if: matrix.os == 'windows-2019'
         run: |
           cd electron
-          npx electron-builder --x64 --win
+          npm run build-win
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload mac artifact
+        uses: actions/upload-artifact@v4
+        if: matrix.os == 'macos-13'
         with:
-          name: mymap-with-dependencies.jar
+          name: mac-artifacts
           path: |
-            dist/app/FreeTexturePacker-*.dmg
-            dist/app/FreeTexturePacker-*.dmg.blockmap
-            dist/app/latest-mac.yml
-            dist/app/FreeTexturePacker-*.exe
-            dist/app/FreeTexturePacker-*.exe.blockmap
-            dist/app/latest.yml
+            electron/dist/app/FreeTexturePacker-*.dmg
+            electron/dist/app/FreeTexturePacker-*.dmg.blockmap
+            electron/dist/app/latest-mac.yml
+
+      - name: Upload windows artifact
+        uses: actions/upload-artifact@v4
+        if: matrix.os == 'windows-2019'
+        with:
+          name: windows-artifacts
+          path: |
+            electron/dist/app/FreeTexturePacker-*.exe
+            electron/dist/app/FreeTexturePacker-*.exe.blockmap
+            electron/dist/app/latest.yml
