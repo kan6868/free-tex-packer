@@ -1,0 +1,58 @@
+name: Build Electron App
+
+on:
+  push:
+    tags:
+    - 'v*.*.*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: build and release electron app
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ windows-2019, macos-13 ]
+        node: [ '22.2.0' ]
+
+    steps:
+      - name: Check out git repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install Dependencies
+        run: |
+          npm install
+          cd electron && npm install
+
+      - name: Build assets
+        run: npm run build-electron
+
+      - name: Build mac dmg
+        if: matrix.os == 'macos-13'
+        run: |
+          cd electron
+          npx electron-builder --x64 --mac
+
+      - name: Build windows exe
+        if: matrix.os == 'windows-2019'
+        run: |
+          cd electron
+          npx electron-builder --x64 --win
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mymap-with-dependencies.jar
+          path: |
+            dist/app/FreeTexturePacker-*.dmg
+            dist/app/FreeTexturePacker-*.dmg.blockmap
+            dist/app/latest-mac.yml
+            dist/app/FreeTexturePacker-*.exe
+            dist/app/FreeTexturePacker-*.exe.blockmap
+            dist/app/latest.yml
