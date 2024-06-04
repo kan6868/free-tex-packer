@@ -28,7 +28,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm install
+          npm install --legacy-peer-deps
           cd electron && npm install
 
       - name: Build assets
