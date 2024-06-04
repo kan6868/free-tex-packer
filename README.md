@@ -16,7 +16,7 @@ Free texture packer creates sprite sheets for you game or site. Rotation, trimmi
 
 Homepage: [https://free-tex-packer.com](https://free-tex-packer.com)
 
-Web version: [https://free-tex-packer.com/app](https://free-tex-packer.com/app)
+Web version: [https://packer.zfkun.com](https://packer.zfkun.com)
 
 Desktop versions for win, mac, linux: [https://github.com/zfkun/free-tex-packer/releases](https://github.com/zfkun/free-tex-packer/releases)
 
