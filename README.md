@@ -1,9 +1,10 @@
 # Free texture packer
 
-![logo](https://raw.githubusercontent.com/odrick/free-tex-packer/master/electron/build/icons/96x96.png)
+![logo](https://raw.githubusercontent.com/zfkun/free-tex-packer/master/electron/build/icons/96x96.png)
 
 **Some changes are made only to ensure consistency across all revisions**
-**The version is for self use only
+
+**The version is for self use only**
 
 ## IMPORTANT: I don't have time to imporove this app anymore. Only critical bugs will be fixed.
 
