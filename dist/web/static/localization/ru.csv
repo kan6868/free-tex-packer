@@ -36,6 +36,8 @@ TINIFY_TITLE;Оптимизировать, используя TinyPNG https://ti
 TINIFY;Оптимизировать TinyPNG
 TINIFY_KEY_TITLE;Ключ TinyPNG https://tinypng.com/developers 
 TINIFY_KEY;Ключ TinyPNG
+TINIFY_URL_TITLE;Tinify API URL https://127.0.0.1/tinify.php 
+TINIFY_URL;Tinify API URL
 DISABLE_SMOOTHING;Отключить сглаживание
 DISABLE_SMOOTHING_TITLE;Отключить сглаживание изображения
 SCALE;Масштаб:
@@ -83,6 +85,7 @@ NO_IMAGES_ERROR;Добавьте сначала изображения
 CLEAR_WARNING;Действительно удалить все изображения?
 INVALID_ZIP_ERROR;Неверный zip файл
 NO_TINIFY_KEY_ERROR;Пожалуйста, укажите Ваш ключ TinyPNG https://tinypng.com/developers
+NO_TINIFY_URL_ERROR;Пожалуйста, установите URL Tinify API
 TINIFY_ERROR;Ошибка при оптимизации: %s
 TINIFY_ERROR_COMMON;Ошибка при оптимизации...
 OLD_BROWSER_MESSAGE1;Извините, но Ваш браузер устарел...

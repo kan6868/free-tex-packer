@@ -1,16 +1,15 @@
-import { Observer, GLOBAL_EVENT } from './Observer';
-import PackProcessor from './PackProcessor';
-import TextureRenderer from './utils/TextureRenderer';
-import { getFilterByType } from './filters';
-import I18 from './utils/I18';
-import { startExporter } from './exporters';
-import Tinifyer from 'platform/Tinifyer';
-import Downloader from 'platform/Downloader';
+import { Observer, GLOBAL_EVENT } from "./Observer";
+import PackProcessor from "./PackProcessor";
+import TextureRenderer from "./utils/TextureRenderer";
+import { getFilterByType } from "./filters";
+import I18 from "./utils/I18";
+import { startExporter } from "./exporters";
+import Tinifyer from "platform/Tinifyer";
+import Downloader from "platform/Downloader";
 
 let INSTANCE = null;
 
 class APP {
-
     constructor() {
         INSTANCE = this;
 
@@ -21,9 +20,21 @@ class APP {
         this.onPackComplete = this.onPackComplete.bind(this);
         this.onPackError = this.onPackError.bind(this);
 
-        Observer.on(GLOBAL_EVENT.IMAGES_LIST_CHANGED, this.onImagesListChanged, this);
-        Observer.on(GLOBAL_EVENT.PACK_OPTIONS_CHANGED, this.onPackOptionsChanged, this);
-        Observer.on(GLOBAL_EVENT.PACK_EXPORTER_CHANGED, this.onPackExporterOptionsChanged, this);
+        Observer.on(
+            GLOBAL_EVENT.IMAGES_LIST_CHANGED,
+            this.onImagesListChanged,
+            this
+        );
+        Observer.on(
+            GLOBAL_EVENT.PACK_OPTIONS_CHANGED,
+            this.onPackOptionsChanged,
+            this
+        );
+        Observer.on(
+            GLOBAL_EVENT.PACK_EXPORTER_CHANGED,
+            this.onPackExporterOptionsChanged,
+            this
+        );
         Observer.on(GLOBAL_EVENT.START_EXPORT, this.startExport, this);
     }
 
@@ -51,14 +62,18 @@ class APP {
         if (keys.length > 0) {
             Observer.emit(GLOBAL_EVENT.SHOW_SHADER);
             setTimeout(() => this.doPack(), 0);
-        }
-        else {
+        } else {
             this.doPack();
         }
     }
 
     doPack() {
-        PackProcessor.pack(this.images, this.packOptions, this.onPackComplete, this.onPackError);
+        PackProcessor.pack(
+            this.images,
+            this.packOptions,
+            this.onPackComplete,
+            this.onPackError
+        );
     }
 
     onPackComplete(res) {
@@ -74,7 +89,7 @@ class APP {
             this.packResult.push({
                 data: data,
                 buffer: renderer.buffer,
-                renderer: renderer
+                renderer: renderer,
             });
         }
 
@@ -93,9 +108,21 @@ class APP {
             return;
         }
 
-        if (this.packOptions.tinify && !this.packOptions.tinifyKey) {
-            Observer.emit(GLOBAL_EVENT.SHOW_MESSAGE, I18.f("NO_TINIFY_KEY_ERROR"));
-            return;
+        if (this.packOptions.tinify) {
+            if (!this.packOptions.tinifyKey) {
+                Observer.emit(
+                    GLOBAL_EVENT.SHOW_MESSAGE,
+                    I18.f("NO_TINIFY_KEY_ERROR")
+                );
+                return;
+            }
+            if (PLATFORM === "web" && !this.packOptions.tinifyUrl) {
+                Observer.emit(
+                    GLOBAL_EVENT.SHOW_MESSAGE,
+                    I18.f("NO_TINIFY_URL_ERROR")
+                );
+                return;
+            }
         }
 
         Observer.emit(GLOBAL_EVENT.SHOW_SHADER);
@@ -112,20 +139,25 @@ class APP {
 
         let ix = 0;
         for (let item of this.packResult) {
-
-            let fName = textureName + (this.packResult.length > 1 ? "-" + ix : "");
+            let fName =
+                textureName + (this.packResult.length > 1 ? "-" + ix : "");
 
             let buffer = item.renderer.scale(this.packOptions.scale);
 
-            let imageData = filter.apply(buffer).toDataURL(this.packOptions.textureFormat === "png" ? "image/png" : "image/jpeg");
+            let imageData = filter
+                .apply(buffer)
+                .toDataURL(
+                    this.packOptions.textureFormat === "png"
+                        ? "image/png"
+                        : "image/jpeg"
+                );
             let parts = imageData.split(",");
             parts.shift();
             imageData = parts.join(",");
 
             try {
                 imageData = await Tinifyer.start(imageData, this.packOptions);
-            }
-            catch (e) {
+            } catch (e) {
                 Observer.emit(GLOBAL_EVENT.HIDE_SHADER);
                 Observer.emit(GLOBAL_EVENT.SHOW_MESSAGE, e);
                 return;
@@ -134,11 +166,14 @@ class APP {
             files.push({
                 name: `${fName}.${this.packOptions.textureFormat}`,
                 content: imageData,
-                base64: true
+                base64: true,
             });
 
             //TODO: move to options
-            let pixelFormat = this.packOptions.textureFormat === "png" ? "RGBA8888" : "RGB888";
+            let pixelFormat =
+                this.packOptions.textureFormat === "png"
+                    ? "RGBA8888"
+                    : "RGB888";
 
             let options = {
                 imageName: `${fName}`,
@@ -152,25 +187,31 @@ class APP {
                 prependFolderName: this.packOptions.prependFolderName,
                 base64Export: this.packOptions.base64Export,
                 scale: this.packOptions.scale,
-                trimMode: this.packOptions.trimMode
+                trimMode: this.packOptions.trimMode,
             };
 
             try {
                 files.push({
                     name: fName + "." + this.packOptions.exporter.fileExt,
-                    content: await startExporter(exporter, item.data, options)
+                    content: await startExporter(exporter, item.data, options),
                 });
-            }
-            catch (e) {
+            } catch (e) {
                 Observer.emit(GLOBAL_EVENT.HIDE_SHADER);
-                Observer.emit(GLOBAL_EVENT.SHOW_MESSAGE, I18.f("EXPORTER_ERROR", e));
+                Observer.emit(
+                    GLOBAL_EVENT.SHOW_MESSAGE,
+                    I18.f("EXPORTER_ERROR", e)
+                );
                 return;
             }
 
             ix++;
         }
 
-        Downloader.run(files, this.packOptions.fileName, this.packOptions.savePath);
+        Downloader.run(
+            files,
+            this.packOptions.fileName,
+            this.packOptions.savePath
+        );
         Observer.emit(GLOBAL_EVENT.HIDE_SHADER);
     }
 }

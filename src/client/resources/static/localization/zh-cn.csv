@@ -36,6 +36,8 @@ TINIFY_TITLE;Tinify 用法 https://tinypng.com（压缩png）
 TINIFY;Tinify
 TINIFY_KEY_TITLE;TinyPNG key https://tinypng.com/developers 
 TINIFY_KEY;TinyPNG key
+TINIFY_URL_TITLE;Tinify API URL https://127.0.0.1/tinify.php 
+TINIFY_URL;Tinify API URL
 DISABLE_SMOOTHING;禁用平滑
 DISABLE_SMOOTHING_TITLE;禁用图像平滑
 SCALE;放大:
@@ -83,6 +85,7 @@ NO_IMAGES_ERROR;请添加图片
 CLEAR_WARNING;清除所有图像？
 INVALID_ZIP_ERROR;无效的zip文件
 NO_TINIFY_KEY_ERROR;请设置TinyPNG key https://tinypng.com/developers
+NO_TINIFY_URL_ERROR;请设置Tinify API API URL
 TINIFY_ERROR;Tinify错误: %s
 TINIFY_ERROR_COMMON;Tinify错误...
 OLD_BROWSER_MESSAGE1;对不起，您的浏览器对这个应用程序来说太旧了...

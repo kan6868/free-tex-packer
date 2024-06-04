@@ -1,13 +1,13 @@
 {
     "name": "free-tex-packer",
     "displayName": "Free texture packer",
-    "version": "0.6.10",
+    "version": "0.6.11",
     "description": "Free online texture packer",
-    "url": "https://packer.51h5.com",
+    "url": "https://packer.zfkun.com",
     "download": "https://github.com/zfkun/free-tex-packer/releases",
-    "webApp": "https://packer.51h5.com",
+    "webApp": "https://packer.zfkun.com",
     "main": "src/index.js",
-    "tinifyUrl": "https://packer.51h5.com/server/tinify.php",
+    "tinifyUrl": "https://free-tex-packer.com/server/tinify.php",
     "localizations": [
         "en",
         "es",

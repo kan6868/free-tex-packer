@@ -36,6 +36,8 @@ TINIFY_TITLE;Tinify using https://tinypng.com
 TINIFY;Tinify
 TINIFY_KEY_TITLE;TinyPNG key https://tinypng.com/developers 
 TINIFY_KEY;TinyPNG key
+TINIFY_URL_TITLE;Tinify API URL https://127.0.0.1/tinify.php 
+TINIFY_URL;Tinify API URL
 DISABLE_SMOOTHING;Disable smoothing
 DISABLE_SMOOTHING_TITLE;Disable image smoothing
 SCALE;Scale:
@@ -83,6 +85,7 @@ NO_IMAGES_ERROR;Please, add images first
 CLEAR_WARNING;Realy clear all images?
 INVALID_ZIP_ERROR;Invalid zip file
 NO_TINIFY_KEY_ERROR;Please, set your TinyPNG key https://tinypng.com/developers
+NO_TINIFY_URL_ERROR;Please, set your Tinify API URL
 TINIFY_ERROR;Tinify error: %s
 TINIFY_ERROR_COMMON;Tinify error...
 OLD_BROWSER_MESSAGE1;Sorry, but your browser is too old for this application...

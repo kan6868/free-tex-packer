@@ -80,6 +80,7 @@ class PackProperties extends React.Component {
         data.base64Export = data.base64Export === undefined ? false : data.base64Export;
         data.tinify = data.tinify === undefined ? false : data.tinify;
         data.tinifyKey = data.tinifyKey === undefined ? "" : data.tinifyKey;
+        data.tinifyUrl = data.tinifyUrl === undefined ? "" : data.tinifyUrl;
         data.fileName = data.fileName || "pack-result";
         data.savePath = data.savePath || "";
         data.width = data.width === undefined ? 2048 : data.width;
@@ -132,6 +133,7 @@ class PackProperties extends React.Component {
         data.base64Export = ReactDOM.findDOMNode(this.refs.base64Export).checked;
         data.tinify = ReactDOM.findDOMNode(this.refs.tinify).checked;
         data.tinifyKey = ReactDOM.findDOMNode(this.refs.tinifyKey).value;
+        data.tinifyUrl = ReactDOM.findDOMNode(this.refs.tinifyUrl).value;
         data.scale = Number(ReactDOM.findDOMNode(this.refs.scale).value);
         data.filter = ReactDOM.findDOMNode(this.refs.filter).value;
         data.exporter = ReactDOM.findDOMNode(this.refs.exporter).value;
@@ -163,6 +165,7 @@ class PackProperties extends React.Component {
         ReactDOM.findDOMNode(this.refs.base64Export).checked = this.packOptions.base64Export;
         ReactDOM.findDOMNode(this.refs.tinify).checked = this.packOptions.tinify;
         ReactDOM.findDOMNode(this.refs.tinifyKey).value = this.packOptions.tinifyKey;
+        ReactDOM.findDOMNode(this.refs.tinifyUrl).value = this.packOptions.tinifyUrl;
         ReactDOM.findDOMNode(this.refs.scale).value = Number(this.packOptions.scale);
         ReactDOM.findDOMNode(this.refs.filter).value = this.packOptions.filter;
         ReactDOM.findDOMNode(this.refs.exporter).value = this.packOptions.exporter;
@@ -317,7 +320,14 @@ class PackProperties extends React.Component {
                                 <td>{I18.f("TINIFY_KEY")}</td>
                                 <td><input ref="tinifyKey" type="text" className="border-color-gray" defaultValue={this.packOptions.tinifyKey} onBlur={this.onExporterPropChanged} /></td>
                                 <td></td>
-                            </tr>
+                              </tr>
+                            {PLATFORM === "web" && (
+                              <tr title={I18.f("TINIFY_URL_TITLE")}>
+                                <td>{}{I18.f("TINIFY_URL")}</td>
+                                <td><input ref="tinifyUrl" type="text" className="border-color-gray" defaultValue={this.packOptions.tinifyUrl} onBlur={this.onExporterPropChanged} /></td>
+                                <td></td>
+                              </tr>
+                            )}
                             <tr title={I18.f("SCALE_TITLE")}>
                                 <td>{I18.f("SCALE")}</td>
                                 <td><input ref="scale" type="number" min="0" className="border-color-gray" defaultValue={this.packOptions.scale} onBlur={this.onPropChanged}/></td>
