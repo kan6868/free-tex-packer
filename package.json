@@ -1,7 +1,7 @@
 {
     "name": "free-tex-packer",
     "displayName": "Free texture packer",
-    "version": "0.6.11",
+    "version": "0.6.12",
     "description": "Free online texture packer",
     "url": "https://packer.zfkun.com",
     "download": "https://github.com/zfkun/free-tex-packer/releases",

@@ -321,13 +321,11 @@ class PackProperties extends React.Component {
                                 <td><input ref="tinifyKey" type="text" className="border-color-gray" defaultValue={this.packOptions.tinifyKey} onBlur={this.onExporterPropChanged} /></td>
                                 <td></td>
                               </tr>
-                            {PLATFORM === "web" && (
-                              <tr title={I18.f("TINIFY_URL_TITLE")}>
-                                <td>{}{I18.f("TINIFY_URL")}</td>
+                            <tr title={I18.f("TINIFY_URL_TITLE")} style={{ display: PLATFORM === "web" ? '' : 'none'}}>
+                                <td>{I18.f("TINIFY_URL")}</td>
                                 <td><input ref="tinifyUrl" type="text" className="border-color-gray" defaultValue={this.packOptions.tinifyUrl} onBlur={this.onExporterPropChanged} /></td>
                                 <td></td>
                               </tr>
-                            )}
                             <tr title={I18.f("SCALE_TITLE")}>
                                 <td>{I18.f("SCALE")}</td>
                                 <td><input ref="scale" type="number" min="0" className="border-color-gray" defaultValue={this.packOptions.scale} onBlur={this.onPropChanged}/></td>
