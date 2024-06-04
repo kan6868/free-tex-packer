@@ -45,12 +45,16 @@ jobs:
         run: |
           cd electron
           npx electron-builder --x64 --mac
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build windows exe
         if: matrix.os == 'windows-2019'
         run: |
           cd electron
           npx electron-builder --x64 --win
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/upload-artifact@v4
         with:
