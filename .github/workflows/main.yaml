@@ -42,14 +42,6 @@ jobs:
       - name: Build assets
         run: npm run build-electron
 
-      - name: Build mac dmg
-        if: matrix.os == 'macos-13'
-        run: |
-          cd electron
-          npm run build
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Build windows exe
         if: matrix.os == 'windows-2019'
         run: |
@@ -57,16 +49,6 @@ jobs:
           npm run build-win
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload mac artifact
-        uses: actions/upload-artifact@v4
-        if: matrix.os == 'macos-13'
-        with:
-          name: mac-artifacts
-          path: |
-            electron/dist/app/FreeTexturePacker-*.dmg
-            electron/dist/app/FreeTexturePacker-*.dmg.blockmap
-            electron/dist/app/latest-mac.yml
 
       - name: Upload windows artifact
         uses: actions/upload-artifact@v4
